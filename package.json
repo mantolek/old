@@ -1,0 +1,32 @@
+{
+  "name": "fade_in_page",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "server": "next build && NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "framer-motion": "^2.6.13",
+    "fs": "0.0.1-security",
+    "globby": "^11.0.1",
+    "gsap": "^3.5.1",
+    "locomotive-scroll": "^3.5.4",
+    "next": "9.5.3",
+    "next-i18next": "^6.0.2",
+    "next-offline": "^5.0.2",
+    "next-pwa": "^3.1.4",
+    "normalize.css": "^8.0.1",
+    "nprogress": "^0.2.0",
+    "path": "^0.12.7",
+    "prettier": "^2.1.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-spring": "^7.2.11",
+    "recoil": "0.0.13",
+    "sass": "^1.26.10"
+  }
+}

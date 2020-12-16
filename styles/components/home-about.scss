@@ -1,0 +1,49 @@
+// ***************************************
+// ***************************************
+// ***************************************
+// ABOUT
+
+.about {
+    padding-top: 18vw;
+  
+    .about_left {
+      padding-left: 10vw;
+  
+      & .mark_about:nth-child(1) {
+        padding-left: 17vw;
+      }
+    }
+  
+    .about_right {
+      padding-top: 3rem;
+      padding-left: 27vw;
+    }
+  }
+  
+  .mark_about {
+    overflow: hidden;
+  
+    p {
+      transform: translateY(100%);
+    }
+  }
+  
+  @media only screen and (max-width: 655px) {
+    .about {
+      padding-right: 0rem;
+  
+      .about_left {
+        padding-left: 0rem;
+      }
+  
+      .about_right {
+        padding-left: 0rem;
+      }
+    }
+  
+    .mark_about {
+      p {
+        text-align: left;
+      }
+    }
+  }

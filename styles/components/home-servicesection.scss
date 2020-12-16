@@ -1,0 +1,125 @@
+// ***************************************
+// ***************************************
+// ***************************************
+// serviceSection
+.serviceSection {
+    padding-top: 7rem;
+    position: relative;
+  
+    .service_title {
+      font-size: 9.3vw;
+    }
+    .service_left,
+    .service_left2 {
+      padding-left: 10vw;
+      padding-top: 3rem;
+  
+      & .mark_service:nth-child(1) {
+        padding-left: 17vw;
+      }
+    }
+  
+    .service_right {
+      padding-top: 3rem;
+      padding-left: 27vw;
+    }
+  
+    .last_part {
+      position: relative;
+      padding: 6.5rem 0;
+      padding-bottom: 3rem;
+  
+      .service_img {
+        height: 23vw;
+        width: 23vw;
+        transform: translate(12vw, -1rem);
+      }
+  
+      .go_to_services {
+        overflow: hidden;
+        height: 2rem;
+        width: 5.8rem;
+        font-size: 1.8rem;
+        position: absolute;
+        right: 7.7vw;
+        top: 2rem;
+        display: inline-block;
+  
+        div {
+          display: flex;
+          transition: 0.4s;
+          cursor: pointer;
+        }
+  
+        &:hover div div:nth-child(1) {
+          transform: translateX(-100%);
+        }
+        &:hover div div:nth-child(2) {
+          transform: translateX(-100%);
+        }
+      }
+  
+      .small_services {
+        font-size: 0.5rem;
+        position: absolute;
+        right: 7.7vw;
+        top: 4rem;
+        display: inline-block;
+      }
+  
+      .down_arrow {
+        display: inline-block;
+        width: 1rem;
+        filter: invert(1);
+        position: absolute;
+        right: 20.7vw;
+        top: 5rem;
+        overflow: hidden;
+        transform: rotate(313deg);
+  
+        img {
+          transform: translateX(-100%);
+        }
+      }
+    }
+  }
+  
+  .mark_service {
+    overflow: hidden;
+ 
+    p {
+      transform: translateY(100%);
+    }
+  }
+  
+  @media only screen and (max-width: 655px) {
+    .serviceSection {
+      padding-right: 0rem;
+  
+      .service_left,
+      .service_left2 {
+        padding-left: 0rem;
+        .mark_service {
+          padding-left: 0rem !important;
+        }
+      }
+  
+      .service_right {
+        padding-left: 0rem;
+      }
+  
+      .last_part {
+        .service_img {
+          width: 10rem;
+          height: 10rem;
+        }
+      }
+    }
+  
+    .mark_service {
+      p {
+        text-align: left;
+      }
+    }
+  }
+  

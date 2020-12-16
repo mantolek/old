@@ -1,0 +1,69 @@
+// ***************************************
+// ***************************************
+// ***************************************
+// MENU
+
+.menu {
+    height: 4.2rem;
+    width: 100%;
+    position: relative;
+  
+    //flag
+    .flag {
+      position: absolute;
+      right: 0;
+      bottom: -22px;
+      z-index: 9999;
+  
+      img {
+        width: 1.3rem;
+        height: 0.9rem;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .menu_large {
+    z-index: 9999;
+    top: 0.75rem;
+    left: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    padding-bottom: 0.9rem;
+    font-size: 0.65rem;
+    padding-top: 0.25rem;
+  
+    .logo {
+      flex: 1;
+    }
+  
+    .menu_ul {
+      display: flex;
+  
+      li {
+        height: 0.8rem;
+        text-align: right;
+        position: relative;
+        overflow: hidden;
+        margin-left: 1.5rem;
+  
+        &:nth-child(2) {
+          opacity: 0.5;
+        }
+  
+        div {
+          transition: 0.4s;
+          cursor: pointer;
+        }
+  
+        &:hover div div:nth-child(1) {
+          transform: translateY(-100%);
+        }
+        &:hover div div:nth-child(2) {
+          transform: translateY(-100%);
+        }
+      }
+    }
+  }

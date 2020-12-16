@@ -1,0 +1,38 @@
+// ***************************************
+// ***************************************
+// ***************************************
+// footer
+
+.footer {
+    position: relative;
+    padding-bottom: 2.4rem;
+    width: 100%;
+  
+    .linefooter {
+      top: -1.5rem;
+      width: 0%;
+    }
+  
+    .footer_wrapper {
+      display: flex;
+      align-items: center;
+      font-size: 0.55rem;
+  
+      div {
+        flex: 1;
+  
+        a {
+          cursor: pointer;
+          display: inline;
+        }
+      }
+  
+      ul {
+        display: flex;
+  
+        li {
+          margin: 0 0.5rem;
+        }
+      }
+    }
+  }

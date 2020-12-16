@@ -1,0 +1,211 @@
+@import 'utils/mixin.scss';
+@import 'utils/scroll.scss';
+@import 'utils/cursor.scss';
+@import 'utils/breakpoints.scss';
+
+@import 'components/intro.scss';
+@import 'components/faq-mainsection.scss';
+@import 'components/footer.scss';
+@import 'components/home-about.scss';
+@import 'components/home-contactsection.scss';
+@import 'components/home-mainsection.scss';
+@import 'components/home-servicesection.scss';
+@import 'components/layout.scss';
+@import 'components/menu.scss';
+@import 'components/services-colorsinfo.scss';
+
+@font-face {
+  font-family: maelstrom;
+  src: url('../public/font/maelstrom-bold.woff') format('truetype');
+}
+@font-face {
+  font-family: geograph;
+  src: url('../public/font/geograph-medium.woff') format('truetype');
+}
+@font-face {
+  font-family: Roboto;
+  src: url('../public/font/Roboto-Regular.ttf') format('truetype');
+}
+
+// ***************************************
+// ***************************************
+// ***************************************
+// GENERAL
+
+// Font-size
+$min_width: 300px;
+$max_width: 1600px;
+$min_font: 16px;
+$max_font: 26px;
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  font-family: Roboto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  color: rgb(234, 234, 234);
+  user-select: none;
+  visibility: hidden;
+  // background-color: #202020;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  color: rgb(234, 234, 234);
+}
+
+p,
+h1,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+#__next {
+  height: 100%;
+}
+
+.mark {
+  overflow: hidden;
+  line-height: 2.5rem;
+}
+
+.mark-2 {
+  overflow: hidden;
+  line-height: 8.8vw;
+}
+
+.color_w_green {
+  color: #92f61a;
+}
+
+.color_w_red {
+  color: #ff0000;
+}
+
+.color_w_invert_green {
+  color: #92f61a;
+}
+
+.color_w_invert_blue {
+  color: #5626c4;
+}
+
+.color_w_invert_red {
+  color: #ff0000;
+}
+
+.line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0%;
+  background-color: rgb(234, 234, 234);
+  z-index: 1;
+}
+
+@keyframes noise {
+  0% {
+    transform: translate3d(0, 9rem, 0);
+  }
+  10% {
+    transform: translate3d(-1rem, -4rem, 0);
+  }
+  20% {
+    transform: translate3d(-8rem, 2rem, 0);
+  }
+  30% {
+    transform: translate3d(9rem, -9rem, 0);
+  }
+  40% {
+    transform: translate3d(-2rem, 7rem, 0);
+  }
+  50% {
+    transform: translate3d(-9rem, -4rem, 0);
+  }
+  60% {
+    transform: translate3d(2rem, 6rem, 0);
+  }
+  70% {
+    transform: translate3d(7rem, -8rem, 0);
+  }
+  80% {
+    transform: translate3d(-9rem, 1rem, 0);
+  }
+  90% {
+    transform: translate3d(6rem, -5rem, 0);
+  }
+  to {
+    transform: translate3d(-7rem, 0, 0);
+  }
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  background-color: #202020;
+  position: fixed;
+
+  &::before {
+    content: '';
+    top: -10rem;
+    left: -10rem;
+    width: calc(100% + 20rem);
+    height: calc(100% + 20rem);
+    z-index: 9999;
+    position: fixed;
+    background-image: url('../public/noise.png');
+    opacity: 0.85;
+    pointer-events: none;
+    -webkit-animation: noise 1s steps(2) infinite;
+    animation: noise 1s steps(2) infinite;
+    z-index: 1;
+  }
+}
+
+
+
+
+
+.page1 {
+  height: 100%;
+  width: 100%;
+}
+
+.page2 {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+

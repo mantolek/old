@@ -1,0 +1,78 @@
+// ***************************************
+// ***************************************
+// ***************************************
+//main_info_faq
+.faq {
+    min-height: calc(100vh - 8.4rem);
+    .main_info_faq {
+      position: relative;
+  
+      .faq_title {
+        font-size: 9.3vw;
+        letter-spacing: 0.5rem;
+        font-weight: 800;
+        text-align: center;
+        margin-top: 2.5rem;
+        opacity: 1;
+  
+        p {
+          position: relative;
+          display: inline;
+        }
+  
+        .croz {
+          height: 1.5vw;
+          position: absolute;
+          left: 7.2vw;
+          top: 5vw;
+          width: 0; // 23
+          background: #ff0000;
+          z-index: 3;
+          mix-blend-mode: difference;
+        }
+      }
+  
+      .questions_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem 0 4rem 0;
+        justify-content: center;
+  
+        .questions {
+          // width: 11rem;
+          flex: 1;
+          min-width: 12rem;
+          max-width: 17rem;
+          margin: 1rem;
+          position: relative;
+          opacity: 1;
+  
+          .hyfon {
+            color: red;
+          }
+  
+          div {
+            p {
+              margin-bottom: 0.5rem;
+            }
+            p:nth-child(2) {
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 655px) {
+    .faq {
+      .main_info_faq {
+        .faq_title {
+          .croz {
+            left: 8.2vw;
+          }
+        }
+      }
+    }
+  }
+  
