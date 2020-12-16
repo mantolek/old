@@ -1,7 +1,4 @@
 import React, { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
 import { engdata, pldata } from './data';
 import { useContext } from 'react';
 import { I18nContext } from 'next-i18next';
