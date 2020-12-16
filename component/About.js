@@ -1,33 +1,13 @@
 import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
+import { aboutAnimationOne } from '../utils/animations'
 
 function About() {
   useEffect(() => {
     let aboutLeft = document.querySelectorAll('.about_left p');
-    gsap.to(aboutLeft, {
-      scrollTrigger: {
-        trigger: '.about_left',
-        start: window.innerWidth < 400 ? 'center +300px' : 'top +600vw',
-      },
-      y: '0%',
-      ease: 'Power0.easeNone',
-      stagger: 0.1,
-      duration: 0.55,
-    });
-
     let aboutRight = document.querySelectorAll('.about_right p');
-    gsap.to(aboutRight, {
-      scrollTrigger: {
-        trigger: '.about_right',
-        start: window.innerWidth < 400 ? 'center +300px' : 'top +600vw',
-      },
-      y: '0%',
-      ease: 'Power0.easeNone',
-      stagger: 0.1,
-      duration: 0.55,
-    });
+
+    aboutAnimationOne(aboutLeft, '.about_left')
+    aboutAnimationOne(aboutRight, '.about_right')
   }, []);
   return (
     <div className='about'>

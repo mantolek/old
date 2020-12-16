@@ -16,6 +16,7 @@ function Footer({ t }) {
       duration: 1,
     });
   }, [])
+  
   return (
     <div className='footer'>
       <div className='line linefooter'></div>

@@ -1,325 +1,109 @@
 import React, { useEffect } from 'react';
-import {
-  general,
-  generalInfo,
-  seo,
-  socialMedia,
-  ads,
-  media,
-  special,
-  effects,
-  recommendation,
-} from './data';
+import { general, seo, media, special, effects, recommendation } from './data';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
+import {
+  animationOne,
+  animationTwo,
+  animationThree,
+  animationFour,
+  animationFive,
+  animationSix,
+  animationSeven,
+} from './animations';
 
-const time = gsap.timeline();
 function ColorsInfo() {
   useEffect(() => {
     // croz
-    gsap.to('.croz2', {
-      scrollTrigger: {
-        trigger: '.croz2',
-        start: 'top 570vw',
-      },
-      width: '56vw',
-      marginLeft: '-11.5vw',
-      ease: 'Power0.easeNone',
-      duration: 0.3,
-      delay: 0.8,
-    });
-
+    animationOne('.croz2', '.croz');
     // service text
-    gsap.from(
-      '.service_title',
-      {
-        scrollTrigger: {
-          trigger: '.service_title',
-          start: 'top 570vw',
-        },
-        y: 20,
-        opacity: 0,
-        ease: 'Power0.easeNone',
-        duration: 0.65,
-      },
-      '+=1'
-    );
-
+    animationTwo('.service_title', '.service_title');
     // number
-    gsap.from(
-      '.feature_number',
-      {
-        scrollTrigger: {
-          trigger: '.feature_number',
-          start: 'top 570vw',
-        },
-        y: 20,
-        opacity: 0,
-        ease: 'Power0.easeNone',
-        duration: 0.65,
-      },
-      '+=1'
-    );
+    animationTwo('.feature_number', '.feature_number');
 
     //ebook
-    let ebook = document.querySelectorAll('.ebook_right .ebook_box .ebook_note');
-    gsap.to(ebook, {
-      scrollTrigger: {
-        trigger: ebook,
-        start: 'top +600vw',
-      },
-      y: '0%',
-      ease: 'Power0.easeNone',
-      duration: 0.65,
-      stagger: 0.1,
-    });
+    let ebook = document.querySelectorAll(
+      '.ebook_right .ebook_box .ebook_note'
+    );
+    animationThree(ebook, ebook);
 
     //ebook line
-    gsap.to('.ebook_line', {
-      scrollTrigger: {
-        trigger: '.ebook_line',
-        start: 'bottom +600vw',
-      },
-      width: '100%',
-      ease: 'Power0.easeNone',
-      duration: 0.65,
-    });
+    animationFour('.ebook_line', '.ebook_line');
 
     // desc under services
     let serviceinfo = document.querySelectorAll('.service_info p');
-    gsap.to(serviceinfo, {
-      scrollTrigger: {
-        trigger: serviceinfo,
-        start: 'top +600vw',
-      },
-      x: '0%',
-      opacity: 1,
-      ease: 'Power0.easeNone',
-      duration: 0.65,
-      stagger: 0.1,
-    });
+    animationFive(serviceinfo, serviceinfo);
 
     // green title
     let colorGreen = document.querySelectorAll('.each_box_green p');
-    gsap.to(colorGreen, {
-      scrollTrigger: {
-        trigger: colorGreen,
-        start: 'top +600vw',
-      },
-      y: '0%',
-      ease: 'Power0.easeNone',
-      stagger: 0.1,
-      duration: 0.65,
-    });
+    animationSix(colorGreen, colorGreen);
 
     // blue title
     let colorBlue = document.querySelectorAll('.each_box_blue p');
-    gsap.to(colorBlue, {
-      scrollTrigger: {
-        trigger: colorBlue,
-        start: 'top +600vw',
-      },
-      y: '0%',
-      ease: 'Power0.easeNone',
-      stagger: 0.1,
-      duration: 0.65,
-    });
+    animationSix(colorBlue, colorBlue);
 
     // red title
     let colorRed = document.querySelectorAll('.each_box_red p');
-    gsap.to(colorRed, {
-      scrollTrigger: {
-        trigger: colorRed,
-        start: 'top +600vw',
-      },
-      y: '0%',
-      ease: 'Power0.easeNone',
-      stagger: 0.1,
-      duration: 0.65,
-    });
+    animationSix(colorRed, colorRed);
 
     // yello title
     let colorYello = document.querySelectorAll('.each_box_yello p');
-    gsap.to(colorYello, {
-      scrollTrigger: {
-        trigger: colorYello,
-        start: 'top +600vw',
-      },
-      y: '0%',
-      ease: 'Power0.easeNone',
-      stagger: 0.1,
-      duration: 0.65,
-    });
+    animationSix(colorYello, colorYello);
 
     // pink title
     let colorPink = document.querySelectorAll('.each_box_pink p');
-    gsap.to(colorPink, {
-      scrollTrigger: {
-        trigger: colorPink,
-        start: 'top +600vw',
-      },
-      y: '0%',
-      ease: 'Power0.easeNone',
-      stagger: 0.1,
-      duration: 0.65,
-    });
+    animationSix(colorPink, colorPink);
 
     // orange title
     let colorOrange = document.querySelectorAll('.each_box_orange p');
-    gsap.to(colorOrange, {
-      scrollTrigger: {
-        trigger: colorOrange,
-        start: 'top +600vw',
-      },
-      y: '0%',
-      ease: 'Power0.easeNone',
-      stagger: 0.1,
-      duration: 0.65,
-    });
+    animationSix(colorOrange, colorOrange);
 
     // green2 title
     let colorgreen2 = document.querySelectorAll('.each_box_green2 p');
-    gsap.to(colorgreen2, {
-      scrollTrigger: {
-        trigger: colorgreen2,
-        start: 'top +600vw',
-      },
-      y: '0%',
-      ease: 'Power0.easeNone',
-      stagger: 0.1,
-      duration: 0.65,
-    });
-
-    //-----------------------------------------------------
-    //-----------------------------------------------------
-    //-----------------------------------------------------
+    animationSix(colorgreen2, colorgreen2);
 
     // green boxes
     let colorGreenBoxes = document.querySelectorAll(
       '.data_elements_green .data_elements_box'
     );
-    ScrollTrigger.batch(colorGreenBoxes, {
-      onEnter: (batch) =>
-        gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-      onLeave: (batch) =>
-        gsap.set(batch, { opacity: 0, y: -100, overwrite: true }),
-      onEnterBack: (batch) =>
-        gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-      onLeaveBack: (batch) =>
-        gsap.set(batch, { opacity: 0, y: 100, overwrite: true }),
-    });
-    ScrollTrigger.addEventListener('refreshInit', () =>
-      gsap.set(colorGreenBoxes, { y: 0 })
-    );
+    animationSeven(colorGreenBoxes);
 
     // blue boxes
     let colorBlueBoxes = document.querySelectorAll(
       '.data_elements_blue .data_elements_box'
     );
-    ScrollTrigger.batch(colorBlueBoxes, {
-      onEnter: (batch) =>
-        gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-      onLeave: (batch) =>
-        gsap.set(batch, { opacity: 0, y: -100, overwrite: true }),
-      onEnterBack: (batch) =>
-        gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-      onLeaveBack: (batch) =>
-        gsap.set(batch, { opacity: 0, y: 100, overwrite: true }),
-    });
-    ScrollTrigger.addEventListener('refreshInit', () =>
-      gsap.set(colorBlueBoxes, { y: 0 })
-    );
+    animationSeven(colorBlueBoxes);
 
     // red boxes
     let colorredBoxes = document.querySelectorAll(
       '.data_elements_red .data_elements_box'
     );
-    ScrollTrigger.batch(colorredBoxes, {
-      onEnter: (batch) =>
-        gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-      onLeave: (batch) =>
-        gsap.set(batch, { opacity: 0, y: -100, overwrite: true }),
-      onEnterBack: (batch) =>
-        gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-      onLeaveBack: (batch) =>
-        gsap.set(batch, { opacity: 0, y: 100, overwrite: true }),
-    });
-    ScrollTrigger.addEventListener('refreshInit', () =>
-      gsap.set(colorredBoxes, { y: 0 })
-    );
+    animationSeven(colorredBoxes);
 
     // yello boxes
     let coloryelloBoxes = document.querySelectorAll(
       '.data_elements_yello .data_elements_box'
     );
-    ScrollTrigger.batch(coloryelloBoxes, {
-      onEnter: (batch) =>
-        gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-      onLeave: (batch) =>
-        gsap.set(batch, { opacity: 0, y: -100, overwrite: true }),
-      onEnterBack: (batch) =>
-        gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-      onLeaveBack: (batch) =>
-        gsap.set(batch, { opacity: 0, y: 100, overwrite: true }),
-    });
-    ScrollTrigger.addEventListener('refreshInit', () =>
-      gsap.set(coloryelloBoxes, { y: 0 })
-    );
+    animationSeven(coloryelloBoxes);
 
     // pink boxes
     let colorpinkBoxes = document.querySelectorAll(
       '.data_elements_pink .data_elements_box'
     );
-    ScrollTrigger.batch(colorpinkBoxes, {
-      onEnter: (batch) =>
-        gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-      onLeave: (batch) =>
-        gsap.set(batch, { opacity: 0, y: -100, overwrite: true }),
-      onEnterBack: (batch) =>
-        gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-      onLeaveBack: (batch) =>
-        gsap.set(batch, { opacity: 0, y: 100, overwrite: true }),
-    });
-    ScrollTrigger.addEventListener('refreshInit', () =>
-      gsap.set(colorpinkBoxes, { y: 0 })
-    );
+    animationSeven(colorpinkBoxes);
 
     // orange boxes
     let colororangeBoxes = document.querySelectorAll(
       '.data_elements_orange .data_elements_box'
     );
-    ScrollTrigger.batch(colororangeBoxes, {
-      onEnter: (batch) =>
-        gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-      onLeave: (batch) =>
-        gsap.set(batch, { opacity: 0, y: -100, overwrite: true }),
-      onEnterBack: (batch) =>
-        gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-      onLeaveBack: (batch) =>
-        gsap.set(batch, { opacity: 0, y: 100, overwrite: true }),
-    });
-    ScrollTrigger.addEventListener('refreshInit', () =>
-      gsap.set(colororangeBoxes, { y: 0 })
-    );
+    animationSeven(colororangeBoxes);
 
     // green2 boxes
     let colorgreen2Boxes = document.querySelectorAll(
       '.data_elements_green2 .data_elements_box'
     );
-    ScrollTrigger.batch(colorgreen2Boxes, {
-      onEnter: (batch) =>
-        gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-      onLeave: (batch) =>
-        gsap.set(batch, { opacity: 0, y: -100, overwrite: true }),
-      onEnterBack: (batch) =>
-        gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-      onLeaveBack: (batch) =>
-        gsap.set(batch, { opacity: 0, y: 100, overwrite: true }),
-    });
-    ScrollTrigger.addEventListener('refreshInit', () =>
-      gsap.set(colorgreen2Boxes, { y: 0 })
-    );
+    animationSeven(colorgreen2Boxes);
 
     // free
     gsap.to('.forfree', {
@@ -342,14 +126,6 @@ function ColorsInfo() {
     e.target.children[1].style.opacity = 1;
     e.target.children[2].style.opacity = 0;
   };
-
-  //0------------------------
-  //0------------------------
-  //0------------------------
-  //0------------------------
-  //0------------------------
-  //0------------------------
-  //0------------------------
 
   return (
     <div className='colorsInfo'>
@@ -381,7 +157,8 @@ function ColorsInfo() {
               </div>
               <div className='ebook_box m1'>
                 <p className='ebook_note'>
-                  will get a free <span style={{color:'#92f61a'}}>e-book</span>.
+                  will get a free{' '}
+                  <span style={{ color: '#92f61a' }}>e-book</span>.
                 </p>
               </div>
               <div className='ebook_box'>
@@ -411,7 +188,9 @@ function ColorsInfo() {
                 <p className='ebook_note'>- Relations with customers</p>
               </div>
               <div className='ebook_box'>
-                <p className='ebook_note'>- Many tools for writing better content</p>
+                <p className='ebook_note'>
+                  - Many tools for writing better content
+                </p>
               </div>
             </div>
 

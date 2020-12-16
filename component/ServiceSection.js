@@ -4,82 +4,27 @@ import { Link } from '../i18n'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
+import { serviceSectionAnimationOne, serviceSectionAnimationTwo, serviceSectionAnimationThree, serviceSectionAnimationFour } from '../utils/animations'
 
 function ServiceSection() {
   useEffect(() => {
     let servicesectionleft = document.querySelectorAll(
       '.service_left .mark_service p'
     );
-    gsap.to(servicesectionleft, {
-      scrollTrigger: {
-        trigger: '.service_left',
-        start: window.innerWidth < 400 ? 'center +300px' : 'top +600vw',
-      },
-      y: '0%',
-      ease: 'Power0.easeNone',
-      stagger: 0.1,
-      duration: 0.55,
-    });
-
     let servicesectionright = document.querySelectorAll(
       '.service_right .mark_service p'
     );
-    gsap.to(servicesectionright, {
-      scrollTrigger: {
-        trigger: '.service_right',
-        start: window.innerWidth < 400 ? 'center +300px' : 'top +600vw',
-      },
-      y: '0%',
-      ease: 'Power0.easeNone',
-      stagger: 0.1,
-      duration: 0.55,
-    });
-
     let servicesectionleft2 = document.querySelectorAll(
       '.service_left2 .mark_service p'
     );
-    gsap.to(servicesectionleft2, {
-      scrollTrigger: {
-        trigger: '.service_left2',
-        start: window.innerWidth < 400 ? 'center +300px' : 'top +600vw',
-      },
-      y: '0%',
-      ease: 'Power0.easeNone',
-      stagger: 0.1,
-      duration: 0.55,
-    });
 
-    gsap.to('.down_arrow img', {
-      scrollTrigger: {
-        trigger: '.down_arrow',
-        start: window.innerWidth < 400 ? 'center +300px' : 'top +600vw',
-      },
-      x: '0%',
-      ease: 'Power0.easeNone',
-      duration: 0.1,
-    });
+    serviceSectionAnimationOne(servicesectionleft, '.service_left')
+    serviceSectionAnimationOne(servicesectionright, '.service_right')
+    serviceSectionAnimationOne(servicesectionleft2, '.service_left2')
+    serviceSectionAnimationTwo('.down_arrow img', '.down_arrow')
+    serviceSectionAnimationThree('.down_arrow', '.down_arrow')
+    serviceSectionAnimationFour('.service_title', '.service_title')
 
-    gsap.to('.down_arrow', {
-      scrollTrigger: {
-        scrub: true, // povoduje przod tyl animacji
-        toggleActions: 'restart pause reverse pause',
-        trigger: '.down_arrow',
-        start: window.innerWidth < 400 ? 'center +300px' : 'top +600vw',
-      },
-      rotate: '360deg',
-      ease: 'Power0.easeNone',
-      duration: 0.3,
-    });
-
-    gsap.from('.service_title', {
-      scrollTrigger: {
-        trigger: '.service_title',
-        start: window.innerWidth < 400 ? 'center +300px' : 'top +600vw',
-      },
-      y: 20,
-      ease: 'Power0.easeNone',
-      duration: 0.3,
-    });
   }, []);
   return (
     <div className='serviceSection'>

@@ -11,24 +11,23 @@ function Menu({ t }) {
     time
       .from(
         '.logo',
-        0.5,
         {
           opacity: 0,
+          duration: 0.5
         },
         '+=1'
       )
       .from(
         ['.menu_ul', '.flag'],
-        0.5,
         {
           opacity: 0,
+          duration: 0.5
         },
         '-=0.5'
       )
       .to(
         '.linemenu',
-        1,
-        { width: '100%', ease: 'Power4.easeInOut' },
+        { width: '100%', ease: 'Power4.easeInOut', duration: 1 },
         '-=.5'
       );
   }, []);

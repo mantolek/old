@@ -4,20 +4,19 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-// PIC
-// https://www.google.com/search?q=transparent%20png%20photo&tbm=isch&tbs=rimg:CWxpcQ0qUzrSYSSRTiW4wndA&rlz=1C1CHBF_enPL748PL748&hl=pl&sa=X&ved=0CBwQuIIBahcKEwjw1d2ut4HsAhUAAAAAHQAAAAAQDA&biw=1349&bih=657#imgrc=IGSoNQolZu3lmM&imgdii=L4c6aKaNluAkgM
-
 const time = gsap.timeline();
 function MainSection() {
   useEffect(() => {
     let all = document.querySelectorAll('.mark-2 p');
     time
-      .from('.p-image', 0.7, {
+      .from('.p-image', {
         x: '0%',
+        duration: '0.7'
       }, '+=0.5')
-      .from(all, 0.6, {
+      .from(all, {
         y: '100%',
         stagger: 0.1,
+        duration: '0.6'
       });
   }, []);
 

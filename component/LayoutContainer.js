@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Intro from './Intro';
 import Menu from './Menu';
 import Footer from './Footer';
-import C from './C';
+import Cursor from './Cursor';
 import SEO from '../component/Seo';
 
 function LayoutContainer({ children }) {
@@ -14,7 +14,7 @@ function LayoutContainer({ children }) {
         description='Professional and creative website development.'
       />
       <div className='background' />
-      <C />
+      <Cursor />
       <Intro setContent={setContent} />
       <div className='layout'>
         {content && (
